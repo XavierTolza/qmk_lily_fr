@@ -2,7 +2,7 @@
 #include "config.h"
 
 #define NB_KEYS_PER_lAYOUT 10
-#define NB_RGB_LAYOUTS 5
+#define NB_RGB_LAYOUTS 10
 #define ALL_MODS 0xFF
 
 typedef struct {

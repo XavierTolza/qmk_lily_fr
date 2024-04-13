@@ -3,7 +3,7 @@
 
 #define ENCODER_NB_CONFIGS 4
 #define ALL_MODS 0xFF
-#define NB_LAYERS 2
+#define NB_LAYERS 3
 
 typedef struct{
     uint8_t mod_mask; // Mask when a modifier is enabled
