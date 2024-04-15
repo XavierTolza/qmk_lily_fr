@@ -7,3 +7,4 @@ DYNAMIC_MACRO_ENABLE = yes
 
 SRC += features/my_leds.c
 SRC += features/encoders.c
+SRC += features/vscode.c
