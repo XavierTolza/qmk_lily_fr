@@ -1,36 +1,36 @@
-# Aurora Lily58's Default Keymap
-_This keymap is a copy of the [Lily58 default keymap](https://github.com/qmk/qmk_firmware/tree/master/keyboards/lily58/keymaps/default), with slight modifications._
+# About
+This is my own firmware for my lily58 keyboard
 
-A simple default keymap for the Aurora Lily58
-=============================================
+* Elite-Pi controller
+* Aurora splitkb lily58
+* qmk==1.1.5
 
-Keymaps in general are quite personal, so it is difficult to come up with a default that will suit every user. We hope this keymap serves as a good starting point for your own - although it should be fairly usable out-of-the-box.
+# Setup to build
 
-What do all these layers do?
-----------------------------
+```bash
+sudo apt install -y git python3-pip python3-venv
+python3 -m venv venv
+. ./venv/bin/activate
+pip install qmk==1.1.5
+qmk setup
+qmk config user.keyboard=splitkb/aurora/lily58/rev1
+qmk config user.keymap=mykeymap
+```
 
-### Layer 0: Base layer
+# Compile
 
-![Layer 0](https://i.imgur.com/sq8Rql7h.png)
+```bash
+qmk compile
+```
 
-This is where your basic letters live.
+# Flash
+Plug in the keyboard, wait until boot and double tap the reset button
 
-The homing thumb fingers are used to access the different layers.
+then 
 
-* The homing left thumb finger gives access to the Symbols (or lower) layer
-* The homing right thumb finger gives access to the Navigation (or raise) layer
-* Pressing both homing thumb fingers gives access to the Adjust layer
-
-### Layer 1: Lower
-
-![Layer 1](https://i.imgur.com/baSE2OJh.png)
-
-The Lower layer gives access to the F keys on the second row, and shifted number keys on the home row. It also provides some shifted symbol keys.
-
-### Layer 2: Raise
-
-![Layer 2](https://i.imgur.com/CRnDa6Nh.png)
-
+```bash
+./flash.sh
+```
 The Raise layer gives access the arrow keys on the right hand, in addition to some unshifted symbols. The left hand provides an alternative set of F keys, while the second row provides an alternative set of number keys.
 
 ### Layer 3: Adjust
