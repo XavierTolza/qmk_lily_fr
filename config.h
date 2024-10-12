@@ -1,5 +1,10 @@
 #pragma once
+
+#ifdef RGBLIGHT_ENABLE
+
 #define RGBLIGHT_EFFECT_TWINKLE
 #define RGBLIGHT_DEFAULT_MODE RGBLIGHT_MODE_TWINKLE+3
+
+#endif
 
 //#define CUSTOM_RGB_LAYERS
