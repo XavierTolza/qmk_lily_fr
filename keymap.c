@@ -57,7 +57,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |      |   ~  |   /  |   {  |   }  |   %  |                    |      |      |  Up  |   '  |   "  |   `  |
      * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
      * |      |   €  |   \  |   (  |   )  |   @  |-------.    ,-------| Home | Left | Down |Right | End  |      |
-     * |------+------+------+------+------+------|       |    |       |------+------+------+------+------+------|
+     * |------+------+------+------+------+------| RGB   |    |       |------+------+------+------+------+------|
      * |      |   $  |   |  |   [  |   ]  |   #  |-------|    |-------|   -  |   +  |   =  |   *  |   !  |      |
      * `-----------------------------------------/       /     \      \-----------------------------------------'
      *                   |      |   <  |   >  | /       /       \      \  |      |      |      |
@@ -68,7 +68,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_F12, KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6, KC_F7, KC_F8, KC_F9, KC_F10, KC_F11,
         KC_NO, FR_TILD, FR_SLSH, FR_LCBR, FR_RCBR, FR_PERC, KC_NO, KC_NO, KC_UP, FR_QUOT, FR_DQUO, FR_GRV,
         KC_NO, FR_EURO, FR_BSLS, FR_LPRN, FR_RPRN, FR_AT, KC_HOME, KC_LEFT, KC_DOWN, KC_RIGHT, KC_END, KC_NO,
-        KC_NO, FR_DLR, FR_PIPE, FR_LBRC, FR_RBRC, FR_HASH, KC_NO, KC_NO, FR_MINS, FR_PLUS, FR_EQL, FR_ASTR, FR_EXLM, KC_NO,
+        KC_NO, FR_DLR, FR_PIPE, FR_LBRC, FR_RBRC, FR_HASH, RGB_TOG, KC_NO, FR_MINS, FR_PLUS, FR_EQL, FR_ASTR, FR_EXLM, KC_NO,
         KC_NO, FR_LABK, FR_RABK, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO)};
 
 #if defined(ENCODER_ENABLE)
