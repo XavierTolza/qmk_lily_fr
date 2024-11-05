@@ -37,7 +37,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |------+------+------+------+------+------|                                |------+------+------+------+------+------|
      * |LShift|   Q  |   S  |   D  |   F  |   G  |-------.  WLup    PGup  ,-------|   H  |   J  |   K  |   L  |   M  |  AI  |
      * |------+------+------+------+------+------| click |  WLdn    PGdn  | PSCR  |------+------+------+------+------+------|
-     * |LCTRL |   Z  |   X  |   C  |   V  |   B  |-------|                |-------|   N  |  ,?  |  ;.  |  :/  |  !§  | DEBUG|
+     * |LCTRL |   Z  |   X  |   C  |   V  |   B  |-------|                |-------|   N  |  ,?  |  ;.  |  :/  |  !§  | PAUSE|
      * `-----------------------------------------/       /                 \      \-----------------------------------------'
      *                   |      | LGUI | LAlt | / Enter /                   \Space \  |  L1  | GIT  |VSCODE|
      *                   |      |      |      |/       /                     \      \ |      |      |      |
@@ -47,7 +47,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_ESC, FR_AMPR, FR_EACU, FR_DQUO, FR_QUOT, FR_LPRN, FR_MINS, FR_EGRV, FR_UNDS, FR_CCED, FR_AGRV, KC_BSPC,
         KC_TAB, FR_A, FR_Z, FR_E, FR_R, FR_T, FR_Y, FR_U, FR_I, FR_O, FR_P, KC_DEL,
         KC_LSFT, FR_Q, FR_S, FR_D, FR_F, FR_G, FR_H, FR_J, FR_K, FR_L, FR_M, AI,
-        KC_LCTL, FR_W, FR_X, FR_C, FR_V, FR_B, KC_BTN1, KC_PSCR, FR_N, FR_COMM, FR_SCLN, FR_COLN, FR_EXLM, DEBUG,
+        KC_LCTL, FR_W, FR_X, FR_C, FR_V, FR_B, KC_BTN1, KC_PSCR, FR_N, FR_COMM, FR_SCLN, FR_COLN, FR_EXLM, KC_PAUS,
         KC_NO, KC_LGUI, KC_LALT, KC_ENT, KC_SPACE, MO(_SPECIAL), GIT, VSCODE),
 
     /* SPECIAL
@@ -104,7 +104,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record)
         nb_custom_pressed += pressed ? 1 : -1;
         return false;
     }
-    else if (nb_custom_pressed > 0)
+    else if (nb_custom_pressed > 0 && pressed)
     {
         // Process key chords
         tap_code16(LALT(last_custom_pressed));
